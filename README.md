@@ -12,7 +12,7 @@ Demo Login screen
 - lazyme
 - pycrypto
 
-#Getting Started 
+# Getting Started 
 - create a local environment to install the project dependencies listed at requirements.txt 
   -virtualenv venv 
   -source venv/bin/activate 
@@ -20,9 +20,9 @@ Demo Login screen
 
 - clone this repository git clone https://github.com/myk4040okothogodo/SocketportForwarding.git
 
-run python servaScript.py
+- run python endClient.py on one terminal , forwardingServer on another terminal and the third script endServer.py on another terminal
 
-go to localhost:8082/login or localhost:8082/register
+go to localhost:8080 or localhost:8088/
 
 Package    Version
 ---------- -------
@@ -33,7 +33,7 @@ setuptools 59.6.0
 wheel      0.37.1
 
 # Usage
-the project is a demonstatrion of webserver and client application communication with port fowarding feature enabled in the webserver. The communication channel is end to end encrypted using Ayssymetric key cryptography
+the project is a demonstatrion of webserver and client application communication with port fowarding feature enabled in the webserver. The communication channel is end to end encrypted using Ayssymetric key cryptography.
 
 
 For more examples, please refer to the Documentation
@@ -49,7 +49,7 @@ Contributions are what make the open source community such an amazing place to l
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
 
-Fork the Project
+#  Fork the Project
 Create your Feature Branch (git checkout -b feature/AmazingFeature)
 Commit your Changes (git commit -m 'Add some AmazingFeature')
 Push to the Branch (git push origin feature/AmazingFeature)
@@ -59,7 +59,7 @@ Distributed under the MIT License. See LICENSE.txt for more information.
 
 (back to top)
 
-Contact
+# Contact
 Your Name - myk_okoth - mikeogodo5@gmail.com
 
 Project Link: https://github.com/myk4040okothogodo/SocketportForwarding
