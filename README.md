@@ -38,11 +38,6 @@ the project is a demonstatrion of webserver and client application communication
 
 For more examples, please refer to the Documentation
 
-(back to top)
-
-Roadmap Feature 1 Feature 2 Feature 3 Nested Feature See the open issues for a full list of proposed features (and known issues).
-
-(back to top)
 
 # Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
