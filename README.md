@@ -21,9 +21,9 @@ Demo Login screen
 - clone this repository git clone https://github.com/myk4040okothogodo/SocketportForwarding.git
 - cd into the implementation folder
 - 
-- first forwardingServer on its own  terminal i.e python forwardingServer.py
-- run python endClient.py on onother terminal i.e python endClient.py
-- and the third server that recives forwarded packets i.e python endServer.py
+- first run forwardingServer on its own  terminal i.e python forwardingServer.py
+- then run python endClient.py on onother terminal i.e python endClient.py
+- and finally run the server that recives forwarded packets i.e python endServer.py
 
 go to localhost:8080 or localhost:8088/
 
