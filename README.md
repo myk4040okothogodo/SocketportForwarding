@@ -19,18 +19,18 @@ Demo Login screen
   -pip install -r requirements.txt
 
 - clone this repository git clone https://github.com/myk4040okothogodo/SocketportForwarding.git
-
+- cd into the implementation folder
 - run python endClient.py on one terminal , forwardingServer on another terminal and the third script endServer.py on another terminal
 
 go to localhost:8080 or localhost:8088/
 
-Package    Version
+# Package    Version
 ---------- -------
-lazyme     0.0.27
-pip        21.3.1
-pycrypto   2.6.1
-setuptools 59.6.0
-wheel      0.37.1
+- lazyme     0.0.27
+- pip        21.3.1
+- pycrypto   2.6.1
+- setuptools 59.6.0
+- wheel      0.37.1
 
 # Usage
 the project is a demonstatrion of webserver and client application communication with port fowarding feature enabled in the webserver. The communication channel is end to end encrypted using Ayssymetric key cryptography.
