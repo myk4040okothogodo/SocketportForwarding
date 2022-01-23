@@ -33,7 +33,7 @@ go to localhost:8080 or localhost:8088/
 - wheel      0.37.1
 
 # Usage
-the project is a demonstatrion of webserver and client application communication with port fowarding feature enabled in the webserver. The communication channel is end to end encrypted using Ayssymetric key cryptography.
+the project is a demonstatrion of webserver and client application communication with port fowarding feature enabled in the webserver. The communication channel is end to end encrypted using Assymetric key cryptography.
 
 
 For more examples, please refer to the Documentation
