@@ -61,7 +61,8 @@ if __name__ == "__main__":
     print (public)
     print ("\n",private)
 
-    host = "localhost"
+
+    host = 'localhost'
     port = 8080
     #
     with open('private.txt', 'w'):
@@ -93,10 +94,13 @@ if __name__ == "__main__":
 
     if check is True:
         color_print("\n[!] Connection Successful", color="green", bold=True)
-        server.send(public + ":" + my_hash_public)
+        
+        print(type(public))
+        print(type(my_hash_public.encode()))
+        server.send(public + ":".encode() + my_hash_public.encode())
         # receive server public key, hash of public , eight byte and hash of eight byte
         fGet =server.recv(4072)
-        split = fGet.split(":")
+        split = fGet.split((':'.encode()))
         toDecrypt = split[0]
         serverPublic = split[1]
 
@@ -142,4 +146,3 @@ if __name__ == "__main__":
                 threading_send.start()
             else:
                 color_print("\n Server (Public key && Public key hash) || (Session key && Hash of Session key) doesnt match", color="red", underline=True)
-
