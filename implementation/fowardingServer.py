@@ -118,7 +118,7 @@ def connectwithEndServer():
 
         if check is True:
             color_print("\n[!] Connection Successful", color="green", bold=True)
-            server.send(public + ":" + my_hash_public)
+            server.send(public + ":".encode() + my_hash_public)
             # receive server public key, hash of public , eight byte and hash of eight byte
             fGet =server.recv(4072)
             split = fGet.split(":")
@@ -251,7 +251,7 @@ def broadcast_usr(uname, socketClient, AESk):
                     b_usr(socketClient, uname, data)
                     print ("\n[!]", uname, " SAID :", data)
                     color_print("\n[!] Client's encrpted message\n"+ en, color="gray")
-           return data         
+            return data         
         except Exception as x:
             print(x.message)
             break
@@ -309,34 +309,29 @@ if __name__ == "__main__":
 
     except BaseException:
         color_print("Key storing in failed", color="red", underline=True)
-
     check = False
     color_print("Middle server up, type yes to set up pipe",  color="blue", bold=True)
-    ask =  input("[>]")
-    ask.upper()
 
-    if ask == YES:
-        host = 'localhost'
-        port = 8080
-    else:
-        color_print("[!] Invalid selection", color="red", underline=True)
-        os.kill(os.getpid(), signal.SIGKILL)
+    host = 'localhost'
+    port = 8080
+        #color_print("[!] Invalid selection", color="red", underline=True)
+       # os.kill(os.getpid(), signal.SIGKILL)
 
-        print ("\n",public, "\n\n", private)
-        color_print("\n[!] Eight byte session key in hash\n", color="blue")
-        print (session)
-        color_print("\n[!] Server IP"+ host+" & PORT"+ str(port), color="green", underline=True)
+    print ("\n",public, "\n\n", private)
+    color_print("\n[!] Eight byte session key in hash\n", color="blue")
+    print (session)
+    color_print("\n[!] Server IP"+ host+" & PORT"+ str(port), color="green", underline=True)
 
-        server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        server.bind(( host, port))
-        server.listen(1)
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    server.bind(( host, port))
+    server.listen(1)
 
-        color_print("\n[!] Server Connection Successful", color="green", bold=True)
-        check = True
+    color_print("\n[!] Server Connection Successful", color="green", bold=True)
+    check = True
 
-        # accept clients
-        threading_accept = threading.Thread(target=ConnectionSetup)
+    # accept clients
+    threading_accept = threading.Thread(target=ConnectionSetup)
         
-        threading_accept.start()
-        threading_send = threading.Thread(target= connectwithEndServer)
+    threading_accept.start()
+    threading_send = threading.Thread(target= connectwithEndServer)
